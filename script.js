@@ -20,7 +20,7 @@ async function main() {
 
         try {
             // Make the POST request to your own backend server (not Hugging Face directly)
-            const response = await fetch("http://localhost:3000/analyze", {
+            const response = await fetch("https://plant-disease-detector-backend.vercel.app/analyze", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
