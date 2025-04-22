@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Plant Disease Detection</title>
+</head>
+
+<body class="bg-gradient-to-b from-green-50 to-green-200 font-sans">
+
+    <div class="container mx-auto p-6">
+
+        <!-- Header -->
+        <div class="header flex justify-center items-center bg-white text-green-800 py-4 rounded-lg shadow-lg mb-10">
+            <img src="assets/tea-leaves.png" alt="Tea Leaves" class="w-16 h-16 mr-4">
+            <h1 class="text-3xl font-bold">Plant Disease Detector</h1>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="upload flex justify-center">
+            <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg border border-green-300">
+                <label for="dropzone-file"
+                    class="flex flex-col items-center justify-center p-8 border-4 border-dashed border-green-600 bg-green-50 hover:bg-green-100 transition-all rounded-lg cursor-pointer">
+                    <svg class="w-12 h-12 text-green-600 mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                    </svg>
+                    <p class="text-center text-lg text-gray-700"><span class="font-semibold text-green-700">Click to upload</span> or drag and drop</p>
+                    <p class="text-sm text-green-600 mt-2">Supported formats: SVG, PNG, JPG, GIF (MAX. 800x400px)</p>
+                    <input id="dropzone-file" type="file" class="hidden" />
+                </label>
+            </div>
+        </div>
+
+        <!-- Detect Disease Button -->
+        <div class="flex justify-center mt-6">
+            <button class="px-4 py-2 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition duration-200" onclick="main()">
+                🚀 Detect Disease
+            </button>
+        </div>
+
+        <!-- Preview Image -->
+        <div class="preview w-full max-w-md mx-auto mt-10 flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-6 hidden" id="preview-container">
+            <h1 class="text-2xl font-bold text-center my-3">Analyzed Results</h1>
+            <img src="" alt="Preview Image" id="preview-img" class="h-[300px] object-cover rounded-lg mb-4 mx-auto" />
+            <h2 class="text-xl font-semibold text-gray-700 text-center" id="disease-name">Disease Name: </h2>
+            <p class="text-lg text-green-600 text-center" id="confidence">Confidence: </p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-10 text-center text-gray-600">
+            <p>Made by Jerome Mondol</p>
+            <p>Github: <a href="https://github.com/JeromeMondol" class="text-green-600 underline">Jerome Mondol</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
